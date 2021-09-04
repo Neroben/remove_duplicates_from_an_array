@@ -21,10 +21,12 @@ public class Main {
             }
         }
         return cleanArray(array, countDropElement);
-        //осталось создать новый массив и продублировать все туда
     }
 
     private static Object[] cleanArray(Object[] array, int countDropElement) {
+        if(countDropElement == 0) {
+            return array;
+        }
         int arrayLength = array.length;
         Object[] cleanArray = new Object[arrayLength - countDropElement];
         int j = 0;
